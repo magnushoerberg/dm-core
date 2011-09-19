@@ -958,7 +958,7 @@ module DataMapper
           when Operator, Direction
             operator = order_entry.operator
 
-            unless operator == :asc || operator == :desc
+            unless operator == :asc || operator == :desc || operator == :simi
               raise ArgumentError, "+options[:order]+ entry #{order_entry.inspect} used an invalid operator #{operator}"
             end
 
